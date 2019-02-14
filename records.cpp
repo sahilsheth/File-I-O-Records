@@ -32,7 +32,7 @@ void Read(PERSON myArray[], int size)
     int i = 0;
     while(!file.eof())
     {
-        
+        //code from class
         file >> firstName;
         file >> lastName;
         file >> num;
@@ -157,18 +157,18 @@ int main()
     Read(a, N);
     
     //Calling all records in array
-   Display(a, N);
+    Display(a, N);
     //Call customer with highest balance
     FindRichest(a, N);
     
     //ask user to input a name and then call the deposit function
-   cout << "Enter your full name to deposit money: ";
-   getline(cin, custName);
-   Deposit(custName, a, N);
+    cout << "Enter your full name to deposit money: ";
+    getline(cin, custName);
+    Deposit(custName, a, N);
     
     //Call the copied array  in the same file
-   NewCopy("data.txt", a, N);
+    NewCopy("data.txt", a, N);
     
-    return 0;
+   return 0;
     
 }
