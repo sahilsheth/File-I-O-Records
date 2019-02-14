@@ -72,11 +72,11 @@ void NewCopy(string addToFile, PERSON a[], int size)
 //Display the name of customer with maximum balance
 void FindRichest(PERSON a[], int size)
 {
-    //Create 2 PERSON objects that will be holding the balances
+ //Create 2 PERSON objects that will be holding the balances
  PERSON tempBalance, anotherTempBalance;
-    //create the local char array
-    char names[20];
-    //get float number to equal to the initial balance
+ //create the local char array to be able to print name
+ char names[20];
+ //get float number to equal to the initial balance
  float rich = a[0].Balance;
  for(int i = 0; i < size; i++)
  {
@@ -116,10 +116,10 @@ void Deposit(string customerName, PERSON a[], int size)
     if(customerName == a[i].Name)
    {
        //the current balance will be increased by whatever input the user selected
-     a[i].Balance += input;
+      a[i].Balance += input;
       cout << "New balance: " << a[i].Balance <<endl;
-    }
-  }
+   }
+ }
     
     cout << endl;
 
@@ -133,9 +133,9 @@ int main()
 {
   
    string name;
-    string custName;
-    string temp;
-     ifstream file;
+   string custName;
+   string temp;
+   ifstream file;
    file.open("data.txt");
     int N = 0;
     
@@ -164,7 +164,7 @@ int main()
     //ask user to input a name and then call the deposit function
    cout << "Enter your full name to deposit money: ";
    getline(cin, custName);
-  Deposit(custName, a, N);
+   Deposit(custName, a, N);
     
     //Call the copied array  in the same file
    NewCopy("data.txt", a, N);
