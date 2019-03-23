@@ -134,14 +134,14 @@ void FindRichest(PERSON a[], int size)
 void Deposit(PERSON *a, int size, string customerName, float amount)
 {
 
-    cout << "Enter name: " << endl;
+    cout << "Enter name: ";
     getline(cin, customerName);
     
     for(int i = 0; i < size; i++)
     {
         if(customerName == a[i].Name)
         {
-            cout << "Amount: " << endl;
+            cout << "Amount: ";
             cin >> amount;
             a[i].Balance += amount;
             cout << "New Balance: " << a[i].Balance << endl;
